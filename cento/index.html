@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cento — Percentage Calculator</title>
+<meta name="description" content="Cento is the fastest, cleanest way to calculate percentages. Four calculators in one, 19 languages, privacy-first. Your data never leaves your device." />
+<meta property="og:title" content="Cento — Percentage Calculator" />
+<meta property="og:description" content="Percentages in 2 seconds. Four calculators in one, 19 languages, privacy-first." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://maverick770.github.io/app-pages/cento/" />
+<style>
+  :root{
+    --bg:#0b0d12; --card:#13161d; --line:#222632;
+    --ink:#f4f6fb; --muted:#9aa3b4;
+    --blue:#3b82f6; --indigo:#6366f1; --green:#22c55e; --orange:#f97316; --violet:#a855f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,system-ui,sans-serif;
+    background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased;
+    line-height:1.55; overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60% 50% at 18% 8%, rgba(99,102,241,.28), transparent 60%),
+      radial-gradient(55% 45% at 85% 0%, rgba(59,130,246,.22), transparent 60%),
+      radial-gradient(50% 50% at 50% 100%, rgba(168,85,247,.14), transparent 60%);}
+  header,main,footer{position:relative;z-index:1}
+
+  /* Nav */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em;font-size:20px}
+  .mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900;
+    background:linear-gradient(135deg,var(--indigo),var(--blue));color:#fff;font-size:18px;box-shadow:0 6px 18px rgba(99,102,241,.45)}
+  .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+
+  /* Hero */
+  .hero{text-align:center;padding:72px 0 56px}
+  .pill{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);
+    padding:6px 14px;border-radius:999px;margin-bottom:26px;background:rgba(255,255,255,.02)}
+  h1{font-size:clamp(40px,7vw,76px);font-weight:900;letter-spacing:-.04em;line-height:1.02}
+  h1 .accent{background:linear-gradient(120deg,var(--blue),var(--indigo) 40%,var(--violet));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{max-width:620px;margin:24px auto 0;font-size:clamp(17px,2.4vw,21px);color:var(--muted)}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+  .btn{padding:14px 26px;border-radius:14px;font-weight:700;font-size:15px;transition:transform .15s ease,box-shadow .15s ease}
+  .btn-primary{background:linear-gradient(135deg,var(--indigo),var(--blue));color:#fff;box-shadow:0 12px 30px rgba(59,130,246,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(59,130,246,.55)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--muted)}
+
+  /* Feature grid */
+  section{padding:56px 0}
+  .section-title{text-align:center;font-size:clamp(26px,4vw,38px);font-weight:850;letter-spacing:-.03em;margin-bottom:10px}
+  .section-sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 44px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;
+    transition:transform .18s ease,border-color .18s ease}
+  .card:hover{transform:translateY(-4px);border-color:#2c3243}
+  .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:22px;margin-bottom:16px;font-weight:900;color:#fff}
+  .card h3{font-size:18px;font-weight:750;margin-bottom:7px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:14.5px}
+  .c-blue{background:linear-gradient(135deg,#3b82f6,#2563eb)}
+  .c-indigo{background:linear-gradient(135deg,#6366f1,#4f46e5)}
+  .c-green{background:linear-gradient(135deg,#22c55e,#16a34a)}
+  .c-orange{background:linear-gradient(135deg,#f97316,#ea580c)}
+  .c-violet{background:linear-gradient(135deg,#a855f7,#9333ea)}
+
+  /* Calculators row */
+  .calcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .calc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .calc .tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .calc .ex{font-size:22px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
+  .calc .ex small{color:var(--muted);font-weight:600;font-size:14px}
+
+  /* Pricing */
+  .price{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+    border-radius:24px;padding:38px;text-align:center}
+  .price .amt{font-size:54px;font-weight:900;letter-spacing:-.04em}
+  .price .amt small{font-size:18px;color:var(--muted);font-weight:600}
+  .price ul{list-style:none;text-align:left;max-width:320px;margin:24px auto 0;display:grid;gap:11px}
+  .price li{color:var(--muted);font-size:15px;display:flex;gap:10px;align-items:flex-start}
+  .price li b{color:var(--ink);font-weight:700}
+  .chk{color:var(--green);font-weight:900}
+
+  /* Privacy banner */
+  .privacy{background:linear-gradient(135deg,rgba(34,197,94,.08),rgba(99,102,241,.06));
+    border:1px solid var(--line);border-radius:24px;padding:40px;text-align:center}
+  .privacy h2{font-size:clamp(24px,3.5vw,32px);font-weight:850;letter-spacing:-.03em}
+  .privacy p{color:var(--muted);max-width:560px;margin:14px auto 0}
+
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:34px 0 60px;color:var(--muted);font-size:14px}
+  .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <nav>
+      <div class="brand"><span class="mark">%</span> Cento</div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="pill">⚡ Percentages in 2 seconds · 19 languages</span>
+      <h1>The percentage calculator<br/>that just <span class="accent">makes sense</span>.</h1>
+      <p class="lead">Tips, discounts, increases, reverse percentages — Cento turns the maths you always second-guess into a clean, instant answer. No clutter. No ads. No account.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6755383119">Download on the App Store</a>
+        <a class="btn btn-ghost" href="#features">See what it does</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 class="section-title">Built to be effortless</h2>
+      <p class="section-sub">Everything you need to work with percentages, and nothing you don't.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic c-blue">⚡</div>
+          <h3>Instant results</h3>
+          <p>Type a number, get the answer. Live calculation as you type — no equals button to hunt for.</p>
+        </div>
+        <div class="card">
+          <div class="ic c-indigo">🧮</div>
+          <h3>Four calculators in one</h3>
+          <p>Percentage of a value, increase, decrease and reverse percentage — switch in a single tap.</p>
+        </div>
+        <div class="card">
+          <div class="ic c-green">🕘</div>
+          <h3>History &amp; recalculate</h3>
+          <p>Every calculation is saved. Tap to recalculate, label it, or export your history as CSV/TXT.</p>
+        </div>
+        <div class="card">
+          <div class="ic c-orange">📲</div>
+          <h3>Home Screen widget</h3>
+          <p>Jump straight into any calculator from your Home Screen with a single tap.</p>
+        </div>
+        <div class="card">
+          <div class="ic c-violet">🌍</div>
+          <h3>19 languages</h3>
+          <p>Fully localized — including right-to-left, CJK and Indic scripts. Cento speaks your language.</p>
+        </div>
+        <div class="card">
+          <div class="ic c-blue">🔒</div>
+          <h3>Private by design</h3>
+          <p>100% on-device. No tracking, no analytics SDK, no account. Your numbers stay yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">One app, every percentage problem</h2>
+      <p class="section-sub">The four things people actually need a percentage calculator for.</p>
+      <div class="calcs">
+        <div class="calc"><div class="tag" style="color:#3b82f6">Simple</div><div class="ex">20% of 80 <small>= 16</small></div></div>
+        <div class="calc"><div class="tag" style="color:#22c55e">Increase</div><div class="ex">80 + 15% <small>= 92</small></div></div>
+        <div class="calc"><div class="tag" style="color:#f97316">Decrease</div><div class="ex">80 − 30% <small>= 56</small></div></div>
+        <div class="calc"><div class="tag" style="color:#a855f7">Reverse</div><div class="ex">60 → 75 <small>= +25%</small></div></div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2 class="section-title">Free to start. Pro forever.</h2>
+      <p class="section-sub">No subscription. Unlock everything once and keep it.</p>
+      <div class="price">
+        <div class="amt">€4.99 <small>· one-time</small></div>
+        <ul>
+          <li><span class="chk">✓</span> <span><b>All four calculators</b> — simple, increase, decrease, reverse</span></li>
+          <li><span class="chk">✓</span> <span><b>Unlimited history</b> with labels and tags</span></li>
+          <li><span class="chk">✓</span> <span><b>Export</b> your calculations to CSV or TXT</span></li>
+          <li><span class="chk">✓</span> <span><b>No subscription</b>, no renewals, no surprises</span></li>
+        </ul>
+        <p style="color:var(--muted);font-size:13px;margin-top:22px">The free version includes the simple calculator and your most recent history — forever.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="privacy">
+        <h2>🔒 Your data never leaves your device</h2>
+        <p>Cento stores every calculation locally on your iPhone. There is no server, no account, no advertising and no third-party analytics. Read exactly what we do — and don't do — in our <a href="privacy.html" style="color:var(--green);font-weight:700">Privacy Policy</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="brand" style="font-size:17px"><span class="mark" style="width:28px;height:28px;font-size:15px">%</span> Cento</div>
+      <div class="foot-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:abitbol.laurent@gmail.com">Contact</a>
+      </div>
+    </div>
+    <p style="margin-top:18px;font-size:13px">© 2026 Waikuu · Cento — Percentage Calculator. Made with care.</p>
+  </footer>
+</div>
+</body>
+</html>

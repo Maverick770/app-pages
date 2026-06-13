@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CookStrip — Import any recipe, cook step by step</title>
+<meta name="description" content="CookStrip turns any recipe link into a clean, cookable recipe. Plan your week, build smart shopping lists, and cook hands-free — synced with iCloud, no ads.">
+<meta property="og:title" content="CookStrip — Cook smarter">
+<meta property="og:description" content="Import any recipe from the web, plan your meals and shop in one tap. No ads, iCloud sync, 10 languages.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F27031">
+<style>
+  :root{
+    --accent:#F27031; --accent-deep:#D8551B; --ink:#1C1B1A; --ink-2:#5C5852;
+    --bg:#FFFFFF; --surface:#FBF6F1; --line:#EFE6DD;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  /* Hero */
+  .hero{
+    background:radial-gradient(1200px 600px at 75% -10%,#FFB07C 0%,transparent 60%),
+               linear-gradient(150deg,#F27031 0%,#D8551B 100%);
+    color:#fff;padding:96px 0 110px;position:relative;overflow:hidden;
+  }
+  .hero .wrap{position:relative;z-index:2}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+    background:rgba(255,255,255,.16);padding:8px 14px;border-radius:999px;margin-bottom:26px;
+    backdrop-filter:blur(6px);
+  }
+  .hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;letter-spacing:-.02em;line-height:1.02}
+  .hero p.lead{font-size:clamp(18px,2.4vw,24px);font-weight:400;opacity:.96;margin-top:20px;max-width:620px}
+  .hero .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+  .pill{background:rgba(0,0,0,.14);color:#fff;font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px}
+  /* Sections */
+  section.block{padding:84px 0}
+  h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.01em;text-align:center}
+  .sub{color:var(--ink-2);text-align:center;max-width:560px;margin:14px auto 0;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:48px}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;
+  }
+  .card .ic{
+    width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:23px;
+    background:rgba(242,112,49,.12);margin-bottom:16px;
+  }
+  .card h3{font-size:19px;font-weight:700;margin-bottom:7px}
+  .card p{color:var(--ink-2);font-size:15.5px}
+  /* Values strip */
+  .values{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .values .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:54px 0}
+  .val{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px;
+       background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 20px}
+  .val span.d{color:var(--accent);font-size:19px}
+  /* Footer */
+  footer{padding:56px 0 64px;text-align:center;color:var(--ink-2);font-size:14.5px}
+  footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;margin-bottom:18px}
+  footer a{color:var(--accent-deep);text-decoration:none;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  footer .fine{font-size:13px;opacity:.8;margin-top:6px}
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">🍳 CookStrip</span>
+      <h1>Every recipe, finally in one place.</h1>
+      <p class="lead">Paste any recipe link and CookStrip turns it into a clean, cookable card — then plan your week, build your shopping list, and cook hands-free.</p>
+      <div class="meta">
+        <span class="pill">No ads</span>
+        <span class="pill">iCloud sync</span>
+        <span class="pill">No account needed</span>
+        <span class="pill">10 languages</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>Made for the way you actually cook</h2>
+      <p class="sub">From the recipe you found this morning to dinner on the table — without the clutter.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic">🔗</div>
+          <h3>Import in a tap</h3>
+          <p>Paste a link from blogs and recipe sites. CookStrip extracts the title, ingredients, steps and time automatically. No more retyping.</p>
+        </div>
+        <div class="card">
+          <div class="ic">✍️</div>
+          <h3>Your own recipes</h3>
+          <p>Add family recipes by hand with a photo, personal notes and favorites — kept right next to the ones you import.</p>
+        </div>
+        <div class="card">
+          <div class="ic">👨‍🍳</div>
+          <h3>Hands-free cooking</h3>
+          <p>Follow each step on a large screen that stays awake, with built-in timers that keep running even if you leave the app.</p>
+        </div>
+        <div class="card">
+          <div class="ic">🛒</div>
+          <h3>Smart shopping lists</h3>
+          <p>Add recipes to your list and CookStrip groups ingredients by aisle and adds up the quantities for you.</p>
+        </div>
+        <div class="card">
+          <div class="ic">📅</div>
+          <h3>Plan your week</h3>
+          <p>Organize breakfast, lunch and dinner on a weekly calendar and keep your menus under control.</p>
+        </div>
+        <div class="card">
+          <div class="ic">📚</div>
+          <h3>Collections</h3>
+          <p>Sort recipes into collections — starters, desserts, batch cooking, weekend favorites — and find them in seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="wrap">
+      <div class="row">
+        <div class="val"><span class="d">●</span> Private by design</div>
+        <div class="val"><span class="d">●</span> Synced across your devices</div>
+        <div class="val"><span class="d">●</span> No ads, ever</div>
+        <div class="val"><span class="d">●</span> Available in 10 languages</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:support@waikuu.com">support@waikuu.com</a>
+      </div>
+      <div>CookStrip — a Waikuu app</div>
+      <div class="fine">© 2026 Waikuu. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

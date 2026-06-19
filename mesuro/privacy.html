@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <title>Politique de confidentialité — Mesuro</title>
-  <meta name="description" content="Politique de confidentialité — Mesuro" />
+  <meta name="description" content="Politique de confidentialité de Mesuro : traitement 100% local, accès Apple Santé (HealthKit), aucun traceur." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +17,8 @@
     .prose-legal p, .prose-legal li { color: #475569; line-height: 1.7; }
     .prose-legal ul { list-style: disc; padding-left: 1.5rem; margin: .75rem 0; }
     .prose-legal a { color: #4f46e5; text-decoration: underline; }
+    .callout { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: .75rem; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .callout p, .callout li { color: #3730a3; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-700 antialiased">
@@ -36,16 +38,48 @@
           <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">Politique de confidentialité</h1>
           <p class="text-sm text-slate-400 mb-8">Dernière mise à jour : 19 juin 2026</p>
           <div class="prose-legal">
-            <p>La présente politique de confidentialité décrit la manière dont <strong>Mesuro</strong>, édité par Waikuu, traite vos informations.</p><h2>1. Aucune collecte de données</h2>
-         <p><strong>Mesuro fonctionne entièrement sur votre appareil.</strong> L'application ne collecte, ne transmet et ne stocke aucune donnée personnelle sur des serveurs distants. Toutes vos données restent locales, sous votre seul contrôle.</p>
-         <p>Aucune information n'est partagée avec l'éditeur ni avec un quelconque tiers.</p><h2>2. Vos droits (RGPD)</h2>
-       <p>Conformément au Règlement Général sur la Protection des Données, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez-nous à <a href="mailto:abitbol.laurent@gmail.com">abitbol.laurent@gmail.com</a>.</p>
-       <h2>3. Mineurs</h2>
-       <p>Mesuro ne s'adresse pas sciemment aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
-       <h2>4. Modifications</h2>
-       <p>Cette politique peut être mise à jour. Toute modification importante sera signalée sur cette page.</p>
-       <h2>5. Contact</h2>
-       <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:abitbol.laurent@gmail.com">abitbol.laurent@gmail.com</a>.</p>
+            <p>La présente politique décrit la manière dont <strong>Mesuro</strong>, édité par Waikuu, traite vos informations. Mesuro est une application de calcul d'IMC et de suivi de la composition corporelle, conçue dans le respect de votre vie privée.</p>
+
+            <h2>1. Principe : tout reste sur votre appareil</h2>
+            <p><strong>Mesuro fonctionne entièrement sur votre appareil.</strong> L'application ne possède aucun serveur et ne transmet aucune de vos données de santé ou de profil vers un serveur distant. Vos mesures, votre historique, votre profil et vos objectifs sont stockés localement (base de données SwiftData et préférences de l'appareil), dans un conteneur partagé avec le widget Mesuro de votre appareil. Vous en gardez le contrôle exclusif.</p>
+
+            <h2>2. Apple Santé (HealthKit)</h2>
+            <p>Avec votre <strong>autorisation explicite</strong>, et uniquement si vous l'activez, Mesuro s'intègre à Apple Santé :</p>
+            <ul>
+              <li><strong>Lecture</strong> : votre <em>poids</em> et votre <em>taille</em> sont lus depuis Apple Santé afin de pré-remplir vos mesures et de calculer votre IMC et votre composition corporelle.</li>
+              <li><strong>Écriture</strong> : le <em>poids</em> et la <em>taille</em> que vous enregistrez dans Mesuro sont écrits dans Apple Santé pour vous permettre de suivre votre progression dans le temps.</li>
+            </ul>
+            <div class="callout">
+              <p><strong>Vos données de santé ne quittent jamais votre appareil par notre intermédiaire.</strong> Les données issues d'Apple Santé sont stockées sur votre appareil et gérées par Apple. Mesuro ne les transmet à aucun serveur, ne les utilise <strong>jamais</strong> à des fins publicitaires ou de marketing, et ne les partage avec aucun tiers, courtier en données ou service d'analyse.</p>
+            </div>
+            <p>Vous pouvez accorder ou révoquer cet accès à tout moment dans <strong>Réglages › Confidentialité et sécurité › Santé › Mesuro</strong>. Révoquer l'accès n'efface pas les données déjà présentes dans Apple Santé, que vous gérez depuis l'app Santé.</p>
+
+            <h2>3. Données traitées localement</h2>
+            <p>Pour fonctionner, Mesuro conserve sur votre appareil : votre historique de mesures (IMC, poids, taille, catégorie), votre profil (âge, sexe biologique, niveau d'activité), vos éventuelles mesures corporelles (tour de taille, de cou, de hanches, de mollet), vos objectifs de poids et votre série de jours de suivi. Ces informations ne sont ni collectées par l'éditeur, ni transmises à des tiers.</p>
+
+            <h2>4. Achats et abonnements</h2>
+            <p>Mesuro propose un achat unique et un abonnement Premium gérés par <strong>Apple via votre compte App Store</strong>. Le traitement du paiement est assuré exclusivement par Apple : nous n'avons jamais accès à vos coordonnées bancaires. Nous recevons uniquement, de la part d'Apple, la confirmation anonyme de votre statut Premium, nécessaire au déverrouillage des fonctionnalités.</p>
+
+            <h2>5. Notifications</h2>
+            <p>Si vous les activez, Mesuro programme des rappels de pesée <strong>localement</strong> sur votre appareil via les notifications iOS. Aucune notification n'est envoyée depuis un serveur, et aucune donnée n'est collectée à cette occasion.</p>
+
+            <h2>6. Absence de publicité et de traceurs</h2>
+            <p>Mesuro <strong>ne contient aucune publicité, aucun kit de mesure d'audience (analytics), ni aucun traceur tiers</strong>. Aucun identifiant publicitaire n'est utilisé.</p>
+
+            <h2>7. Mineurs</h2>
+            <p>Mesuro ne s'adresse pas sciemment aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
+
+            <h2>8. Vos droits (RGPD)</h2>
+            <p>Vos données étant stockées localement, vous pouvez les consulter, les modifier ou les supprimer directement dans l'application (y compris la suppression complète des données depuis les réglages). Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition. Pour toute demande : <a href="mailto:abitbol.laurent@gmail.com">abitbol.laurent@gmail.com</a>.</p>
+
+            <h2>9. Avertissement santé</h2>
+            <p>Mesuro est un outil d'information et de suivi. Il ne fournit pas de diagnostic médical et ne remplace pas l'avis d'un professionnel de santé. Discutez de vos résultats avec votre médecin.</p>
+
+            <h2>10. Modifications</h2>
+            <p>Cette politique peut être mise à jour. Toute modification importante sera signalée sur cette page, avec mise à jour de la date ci-dessus.</p>
+
+            <h2>11. Contact</h2>
+            <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:abitbol.laurent@gmail.com">abitbol.laurent@gmail.com</a>.</p>
           </div>
         </div>
       </div>
@@ -54,7 +88,7 @@
     <footer class="border-t border-slate-200 bg-white">
       <div class="max-w-3xl mx-auto px-6 py-8 text-sm text-slate-400 flex flex-col sm:flex-row justify-between gap-2">
         <span>© 2026 Waikuu. Tous droits réservés.</span>
-        
+        <a href="https://maverick770.github.io/app-pages/mesuro/terms.html" class="hover:text-slate-600">Conditions d'utilisation</a>
       </div>
     </footer>
   </div>

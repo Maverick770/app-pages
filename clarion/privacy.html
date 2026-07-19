@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clarion — Privacy Policy</title>
+    <meta name="description" content="Clarion collects nothing and sends nothing. 100% local JSON, YAML & XML viewer." />
+    <style>
+      :root { color-scheme: light dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; background: #ffffff; color: #1f2328;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-size: 16px; line-height: 1.65;
+      }
+      main { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+      .head { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+      .logo { width: 44px; height: 44px; border-radius: 11px; background: #0b5fff; position: relative; flex: 0 0 auto; }
+      .logo::after { content: ""; position: absolute; inset: 0; margin: auto; width: 18px; height: 18px; background: #fff; transform: rotate(45deg); border-radius: 3px; }
+      h1 { font-size: 26px; margin: 0; }
+      .updated { color: #6e7781; font-size: 14px; margin: 2px 0 26px; }
+      h2 { font-size: 18px; margin: 30px 0 8px; }
+      p, li { margin: 8px 0; }
+      code { background: #f0f2f4; border: 1px solid #d0d7de; border-radius: 4px; padding: 1px 5px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; }
+      .lead { font-size: 18px; font-weight: 600; background: #eef4ff; border: 1px solid #cfe0ff; border-radius: 10px; padding: 14px 16px; }
+      a { color: #0b5fff; }
+      footer { margin-top: 40px; color: #6e7781; font-size: 14px; border-top: 1px solid #d0d7de; padding-top: 16px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #0e1116; color: #e6edf3; }
+        code { background: #161b22; border-color: #30363d; }
+        .lead { background: #10233f; border-color: #1f3350; }
+        a { color: #6cb6ff; }
+        footer { border-color: #30363d; color: #8b949e; }
+        .updated { color: #8b949e; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <span class="logo" aria-hidden="true"></span>
+        <h1>Clarion — Privacy Policy</h1>
+      </div>
+      <p class="updated">Last updated: 2026-07-19</p>
+
+      <p class="lead">Clarion collects no data. None. There is nothing to send, because Clarion makes no network requests.</p>
+
+      <h2>What Clarion does</h2>
+      <p>Clarion is a Chrome extension that reformats JSON, YAML and XML responses you open in a browser tab into a readable, collapsible tree. All parsing and rendering happens <strong>locally, inside your browser</strong>. The content you view never leaves your machine.</p>
+
+      <h2>Data we collect</h2>
+      <p>None. Specifically, Clarion does <strong>not</strong>:</p>
+      <ul>
+        <li>send any HTTP request, WebSocket, or beacon to any server (ours or a third party's);</li>
+        <li>include any analytics, telemetry, crash reporting, or "phone home" logic;</li>
+        <li>read, store, or transmit your browsing history;</li>
+        <li>use cookies or tracking identifiers.</li>
+      </ul>
+      <p>This is independently verifiable: open Chrome DevTools → <strong>Network</strong> on any page where Clarion is active, and on the extension's service worker. You will see <strong>zero outbound requests</strong> originating from Clarion. The source code is open and auditable, and an automated <code>check:network</code> test in the build forbids any network primitive in the codebase.</p>
+
+      <h2>Data stored locally</h2>
+      <p>Clarion uses <code>chrome.storage.local</code> to remember your <strong>preferences only</strong> (for example your theme choice). This data stays on your device and is never transmitted. You can clear it at any time from the extension's options page or by removing the extension.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><code>storage</code> — to save your preferences (e.g. theme) locally.</li>
+        <li><strong>Host access (<code>&lt;all_urls&gt;</code>)</strong> — required so Clarion can reformat a JSON/YAML/XML response on <strong>any</strong> API URL you choose to open. Clarion only reads the content already loaded in the tab to render it; it makes no request of its own. It never modifies network traffic.</li>
+      </ul>
+
+      <h2>Payments (future Pro features)</h2>
+      <p>The current version is entirely free and contains no payment code. If and when optional Pro features are introduced, payment will be handled by a dedicated third-party processor on a separate payment page; that processor's own privacy policy will apply to the transaction. The "zero tracking, zero network" promise of the viewer itself will not change.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy: <a href="mailto:abitbol.laurent@gmail.com">abitbol.laurent@gmail.com</a></p>
+
+      <h2>Changes</h2>
+      <p>If this policy ever changes, the updated version will be published here and the "Last updated" date above will change. Per Chrome Web Store policy, any change in data handling will be disclosed prominently before it takes effect.</p>
+
+      <footer>Clarion — JSON, YAML &amp; XML Viewer · 100% local, open source (MIT).</footer>
+    </main>
+  </body>
+</html>

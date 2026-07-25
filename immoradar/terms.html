@@ -1,75 +1,119 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <title>Conditions Générales d&#39;Utilisation — ImmoRadar</title>
-  <meta name="description" content="Conditions Générales d&#39;Utilisation — ImmoRadar" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
-    .prose-legal h2 { font-weight: 700; font-size: 1.25rem; margin-top: 2rem; margin-bottom: .75rem; color: #0f172a; }
-    .prose-legal h3 { font-weight: 600; font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: .5rem; color: #1e293b; }
-    .prose-legal p, .prose-legal li { color: #475569; line-height: 1.7; }
-    .prose-legal ul { list-style: disc; padding-left: 1.5rem; margin: .75rem 0; }
-    .prose-legal a { color: #4f46e5; text-decoration: underline; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ImmoRadar — Conditions d'utilisation</title>
+<meta name="description" content="Conditions d'utilisation d'ImmoRadar : sources des données, portée des estimations, limites de couverture.">
+<style>
+  :root{
+    --ground:#fcfcfa; --ink:#14170f; --ink-2:#4a4f42; --ink-3:#767b6c;
+    --rule:#dbded4; --brand:#0a5c36; --warn-bg:#fdf6e8; --warn-line:#d8a33a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--ground:#101208;--ink:#edefe6;--ink-2:#b2b7a6;--ink-3:#868c79;
+          --rule:#2e3326;--brand:#6bc28e;--warn-bg:#241c0d;--warn-line:#8a6a22;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+       font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px 72px}
+  header{padding:56px 0 28px;border-bottom:2px solid var(--ink)}
+  .badge{display:inline-flex;align-items:center;gap:9px;margin-bottom:20px}
+  .badge i{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;
+           display:grid;place-items:center;font-style:normal;font-weight:700;font-size:17px}
+  .badge span{font-weight:650;font-size:15px}
+  h1{margin:0 0 12px;font-size:clamp(30px,6vw,42px);line-height:1.08;letter-spacing:-.03em;font-weight:800}
+  .lede{margin:0;color:var(--ink-2);font-size:18px}
+  .updated{margin-top:22px;font-size:13px;color:var(--ink-3)}
+  .warn{margin:32px 0 0;padding:20px 22px;background:var(--warn-bg);
+        border-left:4px solid var(--warn-line);border-radius:3px}
+  .warn p{margin:0;font-weight:600;color:var(--ink)}
+  section{padding-top:38px}
+  h2{font-size:20px;line-height:1.25;letter-spacing:-.01em;margin:0 0 10px;font-weight:700}
+  p{margin:0 0 14px;color:var(--ink-2)}
+  p:last-child{margin-bottom:0}
+  ul{margin:0 0 14px;padding-left:20px;color:var(--ink-2)}
+  li{margin:5px 0}
+  footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--rule);
+         font-size:14px;color:var(--ink-3)}
+  a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:2px}
+  .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
-  <div class="min-h-screen flex flex-col">
-    <header class="bg-white/80 backdrop-blur border-b border-slate-200 sticky top-0 z-10">
-      <div class="max-w-3xl mx-auto px-6 py-5 flex items-center gap-3">
-        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-extrabold shadow-sm">
-          I
-        </div>
-        <span class="text-lg font-bold text-slate-900">ImmoRadar</span>
-      </div>
-    </header>
+<body>
+<div class="wrap">
 
-    <main class="flex-1">
-      <div class="max-w-3xl mx-auto px-6 py-12">
-        <div class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 p-8 sm:p-12">
-          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">Conditions Générales d&#39;Utilisation</h1>
-          <p class="text-sm text-slate-400 mb-8">Dernière mise à jour : 25 juillet 2026</p>
-          <div class="prose-legal">
-            <p>En téléchargeant ou en utilisant <strong>ImmoRadar</strong> (« l'Application »), édité par Waikuu, vous acceptez les présentes Conditions Générales d'Utilisation.</p>
+  <header>
+    <div class="badge"><i>IR</i><span>ImmoRadar</span></div>
+    <h1>Conditions d'utilisation</h1>
+    <p class="lede">Ce que fait l'application, ce qu'elle ne fait pas, et d'où viennent ses chiffres.</p>
+    <p class="updated">Dernière mise à jour : 25 juillet 2026</p>
+  </header>
 
-      <h2>1. Licence d'utilisation</h2>
-      <p>Waikuu vous accorde une licence personnelle, limitée, non exclusive et non transférable d'utilisation de l'Application sur les appareils Apple dont vous êtes propriétaire ou que vous contrôlez, conformément aux Conditions d'utilisation de l'App Store.</p>
-
-      <h2>2. Achats et abonnements</h2>
-      <p>L'Application propose des achats intégrés et/ou des abonnements gérés par Apple via votre compte App Store. Le paiement est prélevé à la confirmation de l'achat. Les abonnements se renouvellent automatiquement sauf désactivation au moins 24 h avant la fin de la période en cours.</p>
-      <p>Vous pouvez gérer et résilier vos abonnements à tout moment dans les réglages de votre compte App Store. La gestion des remboursements relève d'Apple.</p>
-
-      <h2>3. Utilisation acceptable</h2>
-      <p>Vous vous engagez à ne pas détourner l'Application, à ne pas tenter d'en extraire le code source, ni à l'utiliser à des fins illégales.</p>
-
-      <h2>4. Propriété intellectuelle</h2>
-      <p>L'Application et l'ensemble de ses contenus restent la propriété exclusive de Waikuu.</p>
-
-      <h2>5. Limitation de responsabilité</h2>
-      <p>L'Application est fournie « en l'état ». Dans les limites autorisées par la loi, Waikuu ne saurait être tenu responsable des dommages indirects résultant de son utilisation.</p>
-
-      <h2>6. Résiliation</h2>
-      <p>Nous pouvons suspendre ou résilier votre accès en cas de violation des présentes conditions.</p>
-
-      <h2>7. Contact</h2>
-      <p>Pour toute question : <a href="mailto:support@waikuu.com">support@waikuu.com</a>.</p>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="border-t border-slate-200 bg-white">
-      <div class="max-w-3xl mx-auto px-6 py-8 text-sm text-slate-400 flex flex-col sm:flex-row justify-between gap-2">
-        <span>© 2026 Waikuu. Tous droits réservés.</span>
-        
-      </div>
-    </footer>
+  <div class="warn">
+    <p>Les résultats sont indicatifs. Ils ne constituent ni une expertise immobilière, ni un diagnostic réglementaire, ni un conseil en investissement.</p>
   </div>
+
+  <section>
+    <h2>Ce que fait l'application</h2>
+    <p>ImmoRadar rassemble et croise des données publiques sur un bien immobilier : ventes enregistrées, diagnostic de performance énergétique et risques naturels ou technologiques. Elle produit une estimation indicative d'une marge de négociation et un rapport à présenter au vendeur.</p>
+  </section>
+
+  <section>
+    <h2>Ce qu'elle n'est pas</h2>
+    <p>Les résultats sont fournis à titre informatif. Ils ne constituent ni une expertise immobilière, ni un diagnostic réglementaire, ni un conseil en investissement, ni une garantie de prix.</p>
+    <p>Un diagnostic de performance énergétique opposable ne peut être établi que par un diagnostiqueur certifié. L'exposition réelle d'une parcelle à un risque doit être vérifiée auprès de la commune et dans les documents d'urbanisme.</p>
+    <p>Les décisions d'achat, d'offre et de négociation relèvent de votre seule responsabilité.</p>
+  </section>
+
+  <section>
+    <h2>Sources des données</h2>
+    <ul>
+      <li>Demandes de valeurs foncières (DVF) — Direction générale des finances publiques</li>
+      <li>Diagnostics de performance énergétique — ADEME</li>
+      <li>Risques naturels et technologiques — Géorisques, BRGM</li>
+      <li>Adresses — Base Adresse Nationale</li>
+    </ul>
+    <p>Ces données sont diffusées sous Licence Ouverte 2.0 (Etalab).</p>
+  </section>
+
+  <section>
+    <h2>Limites de couverture</h2>
+    <p>Les données de ventes ne couvrent pas la Moselle, le Bas-Rhin et le Haut-Rhin : ces départements relèvent du régime du livre foncier et sont absents du fichier DVF. Dans ces trois départements, l'application affiche le diagnostic énergétique et les risques, mais aucun prix de vente ni analyse de marché.</p>
+    <p>Ailleurs, une parcelle peut n'avoir aucune vente enregistrée sur la période couverte, et son diagnostic énergétique peut être estimé à partir de la rue ou de la commune plutôt que mesuré sur le bien. L'application indique toujours l'origine et la fiabilité de chaque valeur affichée.</p>
+  </section>
+
+  <section>
+    <h2>Achat</h2>
+    <p>Le premier rapport est offert. Le déblocage des rapports suivants est un achat unique, sans abonnement et sans reconduction. Il reste acquis et peut être restauré sur vos autres appareils depuis l'écran Réglages de l'application.</p>
+    <p>Les demandes de remboursement se font auprès d'Apple, qui gère la transaction.</p>
+  </section>
+
+  <section>
+    <h2>Propriété intellectuelle</h2>
+    <p>L'application, son interface et ses traitements sont la propriété de Waikuu. Les données publiques restent soumises à leur licence d'origine, et les rapports que vous générez vous appartiennent.</p>
+  </section>
+
+  <section>
+    <h2>Droit applicable</h2>
+    <p>Les présentes conditions sont soumises au droit français.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Une question sur ces conditions : <a href="mailto:support@waikuu.com">support@waikuu.com</a></p>
+  </section>
+
+  <footer>
+    ImmoRadar est édité par Waikuu.
+    <div class="links">
+      <a href="./privacy.html">Confidentialité</a>
+      <a href="./support.html">Support</a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>

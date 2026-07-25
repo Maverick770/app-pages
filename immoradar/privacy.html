@@ -1,62 +1,115 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <title>Politique de confidentialité — ImmoRadar</title>
-  <meta name="description" content="Politique de confidentialité — ImmoRadar" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
-    .prose-legal h2 { font-weight: 700; font-size: 1.25rem; margin-top: 2rem; margin-bottom: .75rem; color: #0f172a; }
-    .prose-legal h3 { font-weight: 600; font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: .5rem; color: #1e293b; }
-    .prose-legal p, .prose-legal li { color: #475569; line-height: 1.7; }
-    .prose-legal ul { list-style: disc; padding-left: 1.5rem; margin: .75rem 0; }
-    .prose-legal a { color: #4f46e5; text-decoration: underline; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ImmoRadar — Confidentialité</title>
+<meta name="description" content="Politique de confidentialité d'ImmoRadar : aucune donnée personnelle collectée.">
+<style>
+  :root{
+    --ground:#fcfcfa; --surface:#fff; --ink:#14170f; --ink-2:#4a4f42; --ink-3:#767b6c;
+    --rule:#dbded4; --brand:#0a5c36; --brand-soft:#e8f0ea;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--ground:#101208;--surface:#191c13;--ink:#edefe6;--ink-2:#b2b7a6;--ink-3:#868c79;
+          --rule:#2e3326;--brand:#6bc28e;--brand-soft:#1b2a20;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+       font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px 72px}
+  header{padding:56px 0 28px;border-bottom:2px solid var(--ink)}
+  .badge{display:inline-flex;align-items:center;gap:9px;margin-bottom:20px}
+  .badge i{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;
+           display:grid;place-items:center;font-style:normal;font-weight:700;font-size:17px}
+  .badge span{font-weight:650;font-size:15px}
+  h1{margin:0 0 12px;font-size:clamp(30px,6vw,42px);line-height:1.08;letter-spacing:-.03em;font-weight:800}
+  .lede{margin:0;color:var(--ink-2);font-size:18px}
+  .updated{margin-top:22px;font-size:13px;color:var(--ink-3)}
+  .highlight{margin:32px 0 0;padding:20px 22px;background:var(--brand-soft);
+             border-left:4px solid var(--brand);border-radius:3px}
+  .highlight p{margin:0;font-weight:600}
+  section{padding-top:38px}
+  h2{font-size:20px;line-height:1.25;letter-spacing:-.01em;margin:0 0 10px;font-weight:700}
+  p{margin:0 0 14px;color:var(--ink-2)}
+  p:last-child{margin-bottom:0}
+  footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--rule);
+         font-size:14px;color:var(--ink-3)}
+  a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:2px}
+  .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
-  <div class="min-h-screen flex flex-col">
-    <header class="bg-white/80 backdrop-blur border-b border-slate-200 sticky top-0 z-10">
-      <div class="max-w-3xl mx-auto px-6 py-5 flex items-center gap-3">
-        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-extrabold shadow-sm">
-          I
-        </div>
-        <span class="text-lg font-bold text-slate-900">ImmoRadar</span>
-      </div>
-    </header>
+<body>
+<div class="wrap">
 
-    <main class="flex-1">
-      <div class="max-w-3xl mx-auto px-6 py-12">
-        <div class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 p-8 sm:p-12">
-          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">Politique de confidentialité</h1>
-          <p class="text-sm text-slate-400 mb-8">Dernière mise à jour : 25 juillet 2026</p>
-          <div class="prose-legal">
-            <p>La présente politique de confidentialité décrit la manière dont <strong>ImmoRadar</strong>, édité par Waikuu, traite vos informations.</p><h2>1. Aucune collecte de données</h2>
-         <p><strong>ImmoRadar fonctionne entièrement sur votre appareil.</strong> L'application ne collecte, ne transmet et ne stocke aucune donnée personnelle sur des serveurs distants. Toutes vos données restent locales, sous votre seul contrôle.</p>
-         <p>Aucune information n'est partagée avec l'éditeur ni avec un quelconque tiers.</p><h2>2. Vos droits (RGPD)</h2>
-       <p>Conformément au Règlement Général sur la Protection des Données, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez-nous à <a href="mailto:support@waikuu.com">support@waikuu.com</a>.</p>
-       <h2>3. Mineurs</h2>
-       <p>ImmoRadar ne s'adresse pas sciemment aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
-       <h2>4. Modifications</h2>
-       <p>Cette politique peut être mise à jour. Toute modification importante sera signalée sur cette page.</p>
-       <h2>5. Contact</h2>
-       <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:support@waikuu.com">support@waikuu.com</a>.</p>
-          </div>
-        </div>
-      </div>
-    </main>
+  <header>
+    <div class="badge"><i>IR</i><span>ImmoRadar</span></div>
+    <h1>Confidentialité</h1>
+    <p class="lede">Ce document décrit exactement ce que l'application fait — et ne fait pas — de vos informations.</p>
+    <p class="updated">Dernière mise à jour : 25 juillet 2026</p>
+  </header>
 
-    <footer class="border-t border-slate-200 bg-white">
-      <div class="max-w-3xl mx-auto px-6 py-8 text-sm text-slate-400 flex flex-col sm:flex-row justify-between gap-2">
-        <span>© 2026 Waikuu. Tous droits réservés.</span>
-        
-      </div>
-    </footer>
+  <div class="highlight">
+    <p>ImmoRadar ne collecte aucune donnée personnelle. Nous ne savons pas quels biens vous consultez.</p>
   </div>
+
+  <section>
+    <h2>Aucune collecte</h2>
+    <p>ImmoRadar ne collecte aucune donnée personnelle. Il n'y a ni compte, ni inscription, ni identifiant publicitaire, ni outil de mesure d'audience, ni aucun kit de développement tiers de suivi.</p>
+    <p>Nous ne savons pas quels biens vous consultez.</p>
+  </section>
+
+  <section>
+    <h2>Ce qui reste sur votre iPhone</h2>
+    <p>Vos favoris, les prix que vous saisissez, vos notes de visite, les photos que vous ajoutez et les rapports que vous générez sont enregistrés uniquement sur votre appareil. Ils ne sont transmis à personne et disparaissent si vous désinstallez l'application.</p>
+  </section>
+
+  <section>
+    <h2>Localisation</h2>
+    <p>Si vous l'autorisez, votre position sert uniquement à centrer la carte sur l'endroit où vous vous trouvez. Elle n'est ni enregistrée, ni transmise. Vous pouvez refuser cette autorisation : l'application reste entièrement utilisable, la carte s'ouvre alors sur une position par défaut.</p>
+  </section>
+
+  <section>
+    <h2>Connexions réseau</h2>
+    <p>L'application se connecte à Internet dans deux cas seulement.</p>
+    <p><strong>Téléchargement des bases départementales</strong> : les fichiers de données publiques sont téléchargés depuis notre hébergeur. Aucune information vous concernant n'accompagne ces téléchargements.</p>
+    <p><strong>Recherche d'adresse</strong> : lorsque vous tapez une adresse dans la barre de recherche, celle-ci est envoyée au service de cartographie d'Apple pour être localisée. Cette recherche est soumise à la politique de confidentialité d'Apple. Toutes les autres fonctions marchent hors connexion.</p>
+  </section>
+
+  <section>
+    <h2>Achats</h2>
+    <p>Le déblocage des rapports est un achat intégré géré par l'App Store. Nous ne recevons ni votre nom, ni votre adresse, ni vos coordonnées bancaires : Apple nous indique seulement si l'achat a été effectué.</p>
+  </section>
+
+  <section>
+    <h2>Vos droits</h2>
+    <p>Puisqu'aucune donnée personnelle n'est collectée ni conservée par nos soins, il n'y a rien à consulter, rectifier ou supprimer de notre côté. Les données créées dans l'application vous appartiennent et restent sous votre contrôle sur votre appareil.</p>
+  </section>
+
+  <section>
+    <h2>Enfants</h2>
+    <p>ImmoRadar s'adresse à un public adulte et ne collecte aucune donnée, y compris auprès des mineurs.</p>
+  </section>
+
+  <section>
+    <h2>Évolutions</h2>
+    <p>Toute modification de cette politique sera publiée sur cette page, avec une date de mise à jour actualisée. Le même texte est consultable hors connexion dans l'application, à la rubrique Réglages.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Une question sur ce document ou sur l'application : <a href="mailto:support@waikuu.com">support@waikuu.com</a></p>
+  </section>
+
+  <footer>
+    ImmoRadar est édité par Waikuu.
+    <div class="links">
+      <a href="./terms.html">Conditions d'utilisation</a>
+      <a href="./support.html">Support</a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>

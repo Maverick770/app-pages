@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Politique de confidentialité — ImmoPilot</title>
-<meta name="description" content="Comment ImmoPilot traite vos données et celles de vos clients. Tout reste sur votre iPhone.">
+<meta name="description" content="Comment ImmoPilot traite vos données et celles de vos clients. Vos fiches restent sur votre iPhone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -58,7 +58,7 @@ footer a{color:var(--soft)}
   <div class="in">
     <a class="brand" href="./"><span class="mark">IP</span> ImmoPilot</a>
     <h1>Politique de confidentialité</h1>
-    <div class="sub">Version 1.0 · 21 août 2026 · Waikuu Digital Studio</div>
+    <div class="sub">Version 1.1 · 12 octobre 2026 · Waikuu Digital Studio</div>
   </div>
 </header>
 
@@ -67,12 +67,12 @@ footer a{color:var(--soft)}
 
   <div class="tldr">
     <p><b>En une phrase :</b> ImmoPilot conserve vos données sur votre iPhone. Nous n'avons aucun serveur, aucun compte utilisateur, et nous ne recevons rien de ce que vous saisissez — pas même votre nom.</p>
-    <p>Trois nuances honnêtes, détaillées plus bas : le <b>géocodage</b> d'une adresse passe par Apple, une visite ajoutée au <b>calendrier</b> suit les réglages de votre calendrier iOS, et vos données ne sont <b>pas sauvegardées automatiquement</b> — si vous perdez votre iPhone sans sauvegarde, elles sont perdues.</p>
+    <p>Trois nuances honnêtes, détaillées plus bas : les <b>suggestions d'adresse</b> envoient le texte que vous tapez à la Base Adresse Nationale (service public de l'IGN, désactivable dans Réglages), une visite ajoutée au <b>calendrier</b> suit les réglages de votre calendrier iOS, et vos données ne sont <b>pas sauvegardées automatiquement</b> — si vous perdez votre iPhone sans sauvegarde, elles sont perdues.</p>
   </div>
 
   <h2>1. Qui est responsable de quoi</h2>
   <p>ImmoPilot est un logiciel de gestion pour agent immobilier. Vous y saisissez donc, par nature, des <strong>données personnelles concernant des tiers</strong> : vos vendeurs, vos acquéreurs, vos locataires — leurs noms, téléphones, e-mails, budgets, notes de visite.</p>
-  <p>Au sens du RGPD, cela signifie que <strong>vous êtes le responsable de traitement</strong> de ces données. Waikuu Digital Studio n'est ni responsable ni sous-traitant de ce traitement, pour une raison simple et vérifiable : <strong>ces données ne nous parviennent jamais</strong>. Elles ne quittent pas votre appareil.</p>
+  <p>Au sens du RGPD, cela signifie que <strong>vous êtes le responsable de traitement</strong> de ces données. Waikuu Digital Studio n'est ni responsable ni sous-traitant de ce traitement, pour une raison simple et vérifiable : <strong>ces données ne nous parviennent jamais</strong>. Elles restent sur votre appareil, hors les cas énumérés au §3 — dont aucun ne passe par nous.</p>
   <p>Il vous appartient donc, en tant que professionnel :</p>
   <ul>
     <li>de disposer d'une base légale pour traiter les données de vos clients et prospects (intérêt légitime, contrat, consentement selon les cas) ;</li>
@@ -97,7 +97,8 @@ footer a{color:var(--soft)}
   <table>
     <thead><tr><th>Fonction</th><th>Ce qui sort</th><th>Destinataire</th></tr></thead>
     <tbody>
-      <tr><td><b>Localisation d'un bien sur la carte</b></td><td>L'adresse du bien, pour obtenir ses coordonnées</td><td>Apple (service de géocodage d'iOS). Aucune donnée de contact n'est jointe.</td></tr>
+      <tr><td><b>Suggestions d'adresse</b></td><td>Le texte que vous tapez dans un champ d'adresse ou de ville (fiche d'un bien, ville souhaitée d'un acquéreur, ville par défaut), à partir de trois caractères</td><td>La Base Adresse Nationale, via la Géoplateforme de l'IGN (<code>data.geopf.fr</code>), service public français. Aucun nom, téléphone, identifiant ni autre donnée n'est joint. Vous pouvez couper cette fonction dans Réglages → Données et confidentialité → Suggestions d'adresse ; aucune requête ne part alors.</td></tr>
+      <tr><td><b>Itinéraire vers un bien</b></td><td>L'adresse du bien</td><td>L'application de navigation que vous choisissez (Plans, Google Maps ou Waze), qui l'ouvre selon ses propres règles de confidentialité. ImmoPilot ne l'envoie à aucun service lui-même.</td></tr>
       <tr><td><b>Ajout d'une visite au calendrier</b></td><td>Le titre, l'horaire et le lieu de la visite</td><td>Votre calendrier iOS. S'il est synchronisé avec iCloud ou un compte professionnel, l'événement suit cette synchronisation — c'est votre réglage, pas le nôtre.</td></tr>
       <tr><td><b>Abonnement</b></td><td>La transaction d'achat</td><td>Apple (App Store). Nous ne voyons ni votre moyen de paiement, ni votre identité, ni votre adresse — uniquement, via Apple, le fait qu'un abonnement est actif.</td></tr>
       <tr><td><b>Partage, export, transfert</b></td><td>Ce que vous avez explicitement sélectionné</td><td>L'application ou la personne que vous choisissez au moment du partage. Rien n'est envoyé sans cette action de votre part.</td></tr>

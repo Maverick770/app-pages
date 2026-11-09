@@ -58,7 +58,7 @@ footer a{color:var(--soft)}
   <div class="in">
     <a class="brand" href="./"><span class="mark">IP</span> ImmoPilot</a>
     <h1>Politique de confidentialité</h1>
-    <div class="sub">Version 1.2 · 13 octobre 2026 · Waikuu Digital Studio</div>
+    <div class="sub">Version 1.3 · 9 novembre 2026 · Waikuu Digital Studio</div>
   </div>
 </header>
 
@@ -66,8 +66,8 @@ footer a{color:var(--soft)}
 <div class="card">
 
   <div class="tldr">
-    <p><b>En une phrase :</b> ImmoPilot conserve vos données sur votre iPhone. Nous n'avons aucun compte utilisateur et nous ne recevons rien de ce que vous saisissez — pas même votre nom.</p>
-    <p>Quatre nuances honnêtes, détaillées plus bas : les <b>suggestions d'adresse</b> envoient le texte que vous tapez à la Base Adresse Nationale (service public de l'IGN, désactivable dans Réglages), l'<b>estimation</b> d'un bien télécharge des fichiers de ventes publiques depuis notre hébergeur, Cloudflare, sans rien y envoyer de vos données, une visite ajoutée au <b>calendrier</b> suit les réglages de votre calendrier iOS, et vos données ne sont <b>pas sauvegardées automatiquement</b> — si vous perdez votre iPhone sans sauvegarde, elles sont perdues.</p>
+    <p><b>En une phrase :</b> ImmoPilot conserve vos données sur votre appareil, iPhone, iPad ou téléphone Android. Nous n'avons aucun compte utilisateur et nous ne recevons rien de ce que vous saisissez — pas même votre nom.</p>
+    <p>Quatre nuances honnêtes, détaillées plus bas : les <b>suggestions d'adresse</b> envoient le texte que vous tapez à la Base Adresse Nationale (service public de l'IGN, désactivable dans Réglages), l'<b>estimation</b> d'un bien télécharge des fichiers de ventes publiques depuis notre hébergeur, Cloudflare, sans rien y envoyer de vos données, sur iPhone, une visite ajoutée au <b>calendrier</b> suit les réglages de votre calendrier iOS, et vos données ne sont <b>pas sauvegardées automatiquement</b> — si vous perdez votre appareil sans sauvegarde, elles sont perdues.</p>
   </div>
 
   <h2>1. Qui est responsable de quoi</h2>
@@ -82,7 +82,7 @@ footer a{color:var(--soft)}
   </ul>
 
   <h2>2. Ce qui est stocké, et où</h2>
-  <p>Toutes les informations que vous saisissez sont enregistrées dans une base locale, dans l'espace privé de l'application sur votre appareil, protégé par le chiffrement d'iOS :</p>
+  <p>Toutes les informations que vous saisissez sont enregistrées dans une base locale, dans l'espace privé de l'application sur votre appareil, protégé par le chiffrement du système (iOS ou Android) :</p>
   <ul>
     <li>vos <strong>biens</strong> : adresse, prix, surface, diagnostics DPE/GES, photos, notes ;</li>
     <li>vos <strong>contacts</strong> : identité, coordonnées, rôle, critères de recherche, historique d'activité ;</li>
@@ -100,34 +100,36 @@ footer a{color:var(--soft)}
       <tr><td><b>Suggestions d'adresse</b></td><td>Le texte que vous tapez dans un champ d'adresse ou de ville (fiche d'un bien, ville souhaitée d'un acquéreur, ville par défaut), à partir de trois caractères ; et l'adresse d'un bien quand vous touchez « Situer le bien » pour l'estimer</td><td>La Base Adresse Nationale, via la Géoplateforme de l'IGN (<code>data.geopf.fr</code>), service public français. Aucun nom, téléphone, identifiant ni autre donnée n'est joint. Vous pouvez couper cette fonction dans Réglages → Données et confidentialité → Suggestions d'adresse ; aucune requête ne part alors.</td></tr>
       <tr><td><b>Ventes de référence (estimation)</b></td><td>Une simple demande de téléchargement du fichier du département choisi, comme pour toute page web (l'adresse IP de l'appareil est alors visible de l'hébergeur)</td><td>Cloudflare, Inc. (service Cloudflare R2), qui héberge pour nous les fichiers de ventes immobilières publiques (base DVF de la DGFiP, Licence Ouverte 2.0). Aucune donnée de vos biens, de vos contacts ni de votre identité n'est jointe. Le téléchargement n'a lieu que lorsque vous le demandez ; l'estimation est ensuite calculée sur l'appareil, hors connexion. Vous pouvez supprimer ces fichiers dans Réglages → Données et confidentialité → Ventes de référence.</td></tr>
       <tr><td><b>Itinéraire vers un bien</b></td><td>L'adresse du bien</td><td>L'application de navigation que vous choisissez (Plans, Google Maps ou Waze), qui l'ouvre selon ses propres règles de confidentialité. ImmoPilot ne l'envoie à aucun service lui-même.</td></tr>
-      <tr><td><b>Ajout d'une visite au calendrier</b></td><td>Le titre, l'horaire et le lieu de la visite</td><td>Votre calendrier iOS. S'il est synchronisé avec iCloud ou un compte professionnel, l'événement suit cette synchronisation — c'est votre réglage, pas le nôtre.</td></tr>
-      <tr><td><b>Abonnement</b></td><td>La transaction d'achat</td><td>Apple (App Store). Nous ne voyons ni votre moyen de paiement, ni votre identité, ni votre adresse — uniquement, via Apple, le fait qu'un abonnement est actif.</td></tr>
+      <tr><td><b>Ajout d'une visite au calendrier</b></td><td>Le titre, l'horaire et le lieu de la visite</td><td>Sur iPhone et iPad uniquement : votre calendrier iOS. S'il est synchronisé avec iCloud ou un compte professionnel, l'événement suit cette synchronisation — c'est votre réglage, pas le nôtre.</td></tr>
+      <tr><td><b>Abonnement</b></td><td>La transaction d'achat</td><td>Apple (App Store) sur iPhone et iPad, Google (Google Play Billing) sur Android. Nous ne voyons ni votre moyen de paiement, ni votre identité, ni votre adresse — uniquement, via la boutique, le fait qu'un abonnement est actif. Sur Android, l'application ne reçoit qu'un jeton d'achat, qu'elle confirme auprès de Google Play.</td></tr>
       <tr><td><b>Partage, export, transfert</b></td><td>Ce que vous avez explicitement sélectionné</td><td>L'application ou la personne que vous choisissez au moment du partage. Rien n'est envoyé sans cette action de votre part.</td></tr>
-      <tr><td><b>Rapports de panne</b></td><td>Des mesures techniques anonymes (temps de démarrage, plantages)</td><td>Elles restent sur l'appareil. Elles ne nous sont transmises que si <em>vous</em> avez activé le partage d'analyses avec les développeurs dans les réglages d'iOS, et elles ne contiennent alors aucune donnée de vos biens ni de vos contacts. Un interrupteur dédié est également disponible dans l'application.</td></tr>
+      <tr><td><b>Rapports de panne</b></td><td>Des mesures techniques anonymes (temps de démarrage, plantages)</td><td>Elles restent sur l'appareil. Elles ne nous sont transmises que si <em>vous</em> avez activé le partage d'analyses avec les développeurs dans les réglages d'iOS, et elles ne contiennent alors aucune donnée de vos biens ni de vos contacts. Un interrupteur dédié est également disponible dans l'application. Sur Android, l'application ne produit aucun rapport ; Google Play peut recueillir des statistiques de plantage si vous l'avez accepté dans les réglages de votre téléphone (« Utilisation et diagnostic »), selon les règles de Google.</td></tr>
     </tbody>
   </table>
   </div>
-  <p><strong>La génération de texte d'annonce fonctionne sur l'appareil</strong>, via Apple Intelligence lorsque votre iPhone le permet, sinon via un modèle de rédaction local. Aucun contenu n'est envoyé à un service d'intelligence artificielle tiers.</p>
+  <p><strong>La génération de texte d'annonce fonctionne sur l'appareil</strong>, via Apple Intelligence lorsque votre iPhone le permet, sinon via un modèle de rédaction local ; sur Android, toujours via ce modèle local. Aucun contenu n'est envoyé à un service d'intelligence artificielle tiers.</p>
 
   <h2>4. Ce que nous ne faisons pas</h2>
   <ul>
     <li>Aucun compte, aucune inscription, aucun mot de passe.</li>
     <li>Aucun outil de mesure d'audience tiers (pas de Google Analytics, Firebase, Sentry, Meta ou équivalent).</li>
-    <li>Aucun traceur publicitaire, aucun identifiant publicitaire (IDFA), aucune publicité.</li>
+    <li>Aucun traceur publicitaire, aucun identifiant publicitaire (IDFA sur iPhone, identifiant publicitaire Google sur Android), aucune publicité.</li>
     <li>Aucune revente, location ou partage de données avec qui que ce soit.</li>
     <li>Aucun profilage, aucune décision automatisée vous concernant.</li>
   </ul>
-  <p>L'application ne demande que trois autorisations, chacune au moment où elle sert : les <strong>notifications</strong> (pour vos rappels), le <strong>calendrier</strong> (pour vos visites) et la <strong>photothèque</strong> (pour illustrer vos annonces). Vous pouvez les refuser : l'application reste utilisable, seule la fonction concernée est désactivée.</p>
+  <p>Sur iPhone et iPad, l'application ne demande que trois autorisations, chacune au moment où elle sert : les <strong>notifications</strong> (pour vos rappels), le <strong>calendrier</strong> (pour vos visites) et la <strong>photothèque</strong> (pour illustrer vos annonces). Vous pouvez les refuser : l'application reste utilisable, seule la fonction concernée est désactivée.</p>
+  <p>Sur Android, l'application ne demande que les <strong>notifications</strong> (pour vos rappels). Les photos sont choisies dans le sélecteur du système ou prises avec l'appareil photo du système : l'application ne reçoit que les images que vous désignez, sans accès à votre galerie ni à la caméra. Elle n'accède pas à votre calendrier.</p>
 
   <h2>5. Sauvegarde et perte de données</h2>
   <div class="flag">
     <p><b>À lire avant de saisir votre portefeuille.</b> ImmoPilot ne synchronise pas vos données dans le cloud. Il n'existe aucune copie chez nous. Si votre appareil est perdu, volé, réinitialisé, ou si vous désinstallez l'application, <b>les données qu'elle contient sont définitivement perdues</b>, sauf si vous disposez d'une sauvegarde.</p>
   </div>
-  <p>Deux filets existent, et il vous revient de les utiliser :</p>
+  <p>Deux filets existent sur iPhone et iPad, un seul sur Android ; il vous revient de les utiliser :</p>
   <ul>
     <li>la <strong>sauvegarde intégrée</strong> de l'application (Réglages → Sauvegarde), qui produit un fichier que vous conservez où vous le souhaitez et pouvez restaurer à l'identique ;</li>
-    <li>la <strong>sauvegarde iCloud ou iTunes de votre iPhone</strong>, qui inclut les données de l'application selon vos réglages Apple.</li>
+    <li>sur iPhone et iPad, la <strong>sauvegarde iCloud ou iTunes de votre appareil</strong>, qui inclut les données de l'application selon vos réglages Apple.</li>
   </ul>
+  <p><strong>Sur Android, la sauvegarde du système (Google) n'inclut pas les données d'ImmoPilot</strong>, par choix : vos fiches ne partent pas sur un serveur sans que vous le décidiez. La sauvegarde intégrée est donc votre seul filet. Son fichier se restaure indifféremment sur iPhone ou sur Android.</p>
 
   <h2>6. Vos droits, et ceux de vos clients</h2>
   <p>Le RGPD vous garantit un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition. La particularité d'ImmoPilot est que <strong>ces droits s'exercent directement dans l'application</strong>, sans passer par nous — nous ne détenons rien qui vous concerne :</p>
@@ -149,7 +151,7 @@ footer a{color:var(--soft)}
 
   <h2>10. Contact et mentions légales</h2>
   <p><strong>Éditeur :</strong> Waikuu Digital Studio — <a href="mailto:support@waikuu.com">support@waikuu.com</a></p>
-  <p><strong>Application :</strong> ImmoPilot, distribuée sur l'App Store d'Apple.</p>
+  <p><strong>Application :</strong> ImmoPilot, distribuée sur l'App Store d'Apple et sur Google Play.</p>
   <p><strong>Hébergement de cette page :</strong> GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
   <p><strong>Hébergement des ventes de référence :</strong> Cloudflare R2 — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.</p>
   <p>Pour toute question relative à cette politique, écrivez à <a href="mailto:support@waikuu.com">support@waikuu.com</a>. Vous disposez par ailleurs du droit d'introduire une réclamation auprès de la <a href="https://www.cnil.fr">CNIL</a>.</p>

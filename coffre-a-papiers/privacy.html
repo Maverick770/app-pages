@@ -17,32 +17,32 @@
 </head>
 <body>
 <h1>Politique de confidentialité</h1>
-<p class="muted">Coffre à Papiers (iOS) · Éditeur : Waikuu, studio indépendant, France · Dernière mise à jour : 10 septembre 2026</p>
+<p class="muted">Coffre à Papiers (iPhone et Android) · Éditeur : Waikuu, studio indépendant, France · Dernière mise à jour : 18 novembre 2026</p>
 
 <h2>En résumé</h2>
-<p>Coffre à Papiers fonctionne 100 % sur votre iPhone. Vos documents, photos, texte reconnu, numéros et analyses ne quittent jamais votre appareil. Aucun compte, aucun serveur, aucun suivi, aucune publicité. L'éditeur ne collecte aucune donnée personnelle.</p>
+<p>Coffre à Papiers fonctionne 100 % sur votre téléphone, iPhone ou Android. Vos documents, photos, texte reconnu, numéros et analyses ne quittent jamais votre appareil. Aucun compte, aucun serveur, aucun suivi, aucune publicité. L'éditeur ne collecte aucune donnée personnelle.</p>
 
 <h2>Données stockées localement</h2>
 <ul>
   <li>Les images scannées et leurs miniatures.</li>
   <li>Le texte reconnu (OCR) et les informations extraites (dates, montants, références).</li>
-  <li>Les numéros sensibles (numéro de pièce d'identité, numéro de sécurité sociale, numéro fiscal, IBAN), chiffrés avec AES-GCM 256 bits. La clé de chiffrement est conservée dans le Trousseau iOS et synchronisée via le Trousseau iCloud (chiffré de bout en bout par Apple), afin qu'un nouvel iPhone restauré depuis votre sauvegarde retrouve vos données.</li>
+  <li>Les numéros sensibles (numéro de pièce d'identité, numéro de sécurité sociale, numéro fiscal, IBAN), chiffrés avec AES-GCM 256 bits. Sur iPhone, la clé de chiffrement est conservée dans le Trousseau iOS et synchronisée via le Trousseau iCloud (chiffré de bout en bout par Apple), afin qu'un nouvel iPhone restauré depuis votre sauvegarde retrouve vos données. Sur Android, elle est protégée par le Keystore du téléphone et ne le quitte pas.</li>
   <li>Vos dossiers de vie et vos préférences.</li>
 </ul>
 
 <h2>Ce que l'app n'envoie nulle part</h2>
 <ul>
   <li>Aucun document n'est envoyé à un serveur : il n'y en a pas.</li>
-  <li>Aucune télémétrie, aucun outil d'analyse, aucun rapport de plantage automatique. Les seules statistiques disponibles pour l'éditeur sont celles, agrégées et anonymes, qu'Apple fournit aux développeurs avec votre consentement (réglage « Partager les analyses » de l'iPhone).</li>
-  <li>La lecture automatique des documents s'effectue sur l'iPhone (Vision et, sur les appareils compatibles, Apple Intelligence). Aucun service d'IA externe n'est utilisé.</li>
+  <li>Aucune télémétrie, aucun outil d'analyse, aucun rapport de plantage automatique. Les seules statistiques disponibles pour l'éditeur sont celles, agrégées et anonymes, qu'Apple et Google fournissent aux développeurs avec votre consentement (réglage « Partager les analyses » de l'iPhone, diagnostics d'Android). Sur Android, l'app ne demande même pas l'accès à Internet.</li>
+  <li>La lecture automatique des documents s'effectue sur le téléphone : sur iPhone, Vision et, sur les appareils compatibles, Apple Intelligence ; sur Android, la reconnaissance de texte ML Kit embarquée dans l'app et, sur les téléphones compatibles, Gemini Nano, exécuté sur l'appareil par le service système AICore. Aucun service d'IA externe n'est utilisé.</li>
   <li>Aucune donnée n'est partagée avec des tiers.</li>
 </ul>
 
 <h2>Achats intégrés</h2>
-<p>Les achats (abonnement annuel avec essai gratuit, ou achat à vie) sont traités par l'App Store. Coffre à Papiers ne reçoit aucune information de paiement ; elle vérifie uniquement, sur l'appareil, l'existence d'un droit actif via StoreKit.</p>
+<p>Les achats sont traités par l'App Store sur iPhone et par Google Play sur Android. Coffre à Papiers ne reçoit aucune information de paiement ; elle vérifie uniquement, sur l'appareil, l'existence d'un droit actif (StoreKit sur iPhone, Google Play Billing sur Android).</p>
 
-<h2>Sauvegarde et changement d'iPhone</h2>
-<p>Vos données sont incluses dans la sauvegarde iCloud ou ordinateur de votre iPhone. Vous pouvez aussi créer, depuis les Réglages, une sauvegarde chiffrée par mot de passe (fichier .papiers) à conserver où vous voulez, ou exporter une archive lisible (ZIP). Ces fichiers sont créés localement et partagés uniquement là où vous décidez de les envoyer.</p>
+<h2>Sauvegarde et changement de téléphone</h2>
+<p>Sur iPhone, vos données sont incluses dans la sauvegarde iCloud ou ordinateur de l'appareil. Sur Android, elles sont exclues de la sauvegarde automatique de Google : elles ne quittent pas le téléphone. Sur les deux, vous pouvez créer depuis les Réglages une sauvegarde chiffrée par mot de passe (fichier .papiers), restaurable sur iPhone comme sur Android, ou exporter une archive lisible (ZIP). Ces fichiers sont créés localement et partagés uniquement là où vous décidez de les envoyer.</p>
 
 <h2>Suppression de vos données</h2>
 <ul>
@@ -55,6 +55,6 @@
 <p>Aucune donnée personnelle n'étant collectée par l'éditeur, l'exercice de vos droits (accès, rectification, effacement, portabilité) s'effectue directement dans l'app : export lisible, sauvegarde, suppression. Pour toute question : <a href="mailto:support@waikuu.com">support@waikuu.com</a>.</p>
 
 <h2>Notifications</h2>
-<p>Les rappels d'échéance sont des notifications locales, programmées sur l'appareil. La permission est demandée au moment où vous enregistrez une première pièce avec une date de fin de validité.</p>
+<p>Les rappels d'échéance sont des notifications locales, programmées sur l'appareil. La permission est demandée au moment où vous choisissez d'être prévenu des échéances.</p>
 </body>
 </html>
